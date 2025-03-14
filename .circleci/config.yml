@@ -9,6 +9,10 @@ workflows:
       - python_3.8
       - python_3.9
       - python_3.10
+      - python_3.11
+      - python_3.12
+      - python_3.13
+      
 
 template: &template
   docker:
@@ -54,3 +58,15 @@ jobs:
     <<: *template
     environment:
       PYTHON_VERSION: "3.10"
+  python_3.11:
+    <<: *template
+    environment:
+      PYTHON_VERSION: "3.11"
+  python_3.12:
+    <<: *template
+    environment:
+      PYTHON_VERSION: "3.12"
+  python_3.13:
+    <<: *template
+    environment:
+      PYTHON_VERSION: "3.13"
