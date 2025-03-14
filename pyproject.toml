@@ -24,8 +24,8 @@ dev = [
     "sphinx_rtd_theme",
     "sphinx-autobuild",
     "m2r2",
-    "mistune==0.8.4",
-    "Jinja2<3.1",
+    "mistune",
+    "Jinja2",
     "sphinx-version-warning",
     "pytest"
 ]
