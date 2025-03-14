@@ -30,7 +30,7 @@ template: &template
         command: |
           export PATH="$HOME/miniconda/bin:$PATH"
           conda create -n torchfsdd python=$PYTHON_VERSION -y
-          source activate torchfsdd
+          conda activate torchfsdd
           conda install -c conda-forge 'ffmpeg<7'
           pip install -e ".[dev]"
           pytest src/test --disable-pytest-warnings
