@@ -1,17 +1,8 @@
-import importlib, platform
-from pkg_resources import packaging
-if packaging.version.parse(platform.python_version()) < packaging.version.parse('3.8'):
-    import importlib_metadata as metadata
-else:
-    from importlib import metadata
+import importlib
+from importlib import metadata
+from packaging.version import parse
 
-__name__ = "torchfsdd"
-__version__ = "1.0.0"
-__author__ = "Edwin Onuonga"
-__email__ = "ed@eonu.net"
-__copyright__ = f"2019-2023, {__author__}"
-
-MIN_TORCH_VERSION = '1.8'
+MIN_TORCH_VERSION = '2.0'
 MIN_TORCHAUDIO_VERSION = '0.8'
 
 def check_package(pkg, min_version, url):
@@ -35,9 +26,9 @@ def check_package(pkg, min_version, url):
         msg = ("Could not find a valid installation of '{pkg}' (>={min_version}), which TorchFSDD depends on.\n"
         "Visit {url} for more instructions on installing this package.").format(pkg=pkg, url=url, min_version=min_version)
         raise ModuleNotFoundError(msg)
-
+   
     installed_version = metadata.version(pkg)
-    if packaging.version.parse(installed_version) < packaging.version.parse(min_version):
+    if parse(installed_version) < parse(min_version):
         msg = ("Could not find a compatible installation of '{pkg}' (>={min_version}), which TorchFSDD depends on - got version {installed_version}.\n"
         "Visit {url} for more instructions on installing this package.").format(pkg=pkg, url=url, min_version=min_version, installed_version=installed_version)
         raise ImportWarning(msg)

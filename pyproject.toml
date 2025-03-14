@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools","importlib"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "torchfsdd"
+version = "1.1.0"
+requires-python = ">= 3.9"
+authors = [
+    {name = "Edwin Onuonga", email = "ed@eonu.net"},
+    {name = "Abdullah Saydemir", email = "abdullah.saydemir@tum.de"}
+]
+
+dependencies = [
+    "torch >= 2.0",
+    "torchaudio",
+]
+
+[project.optional-dependencies]
+dev = [
+    "torchvision",
+    "sphinx",
+    "numpydoc",
+    "sphinx_rtd_theme",
+    "sphinx-autobuild",
+    "m2r2",
+    "mistune==0.8.4",
+    "Jinja2<3.1",
+    "sphinx-version-warning",
+    "pytest"
+]
