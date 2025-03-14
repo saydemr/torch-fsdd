@@ -25,5 +25,5 @@ Documentation for the package is available on [Read The Docs](https://torch-fsdd
 
 <p align="center">
   <b>TorchFSDD</b> &copy; 2021-2023, Edwin Onuonga - Released under the <a href="https://opensource.org/licenses/MIT">MIT</a> License.<br/>
-  <em>Authored and maintained by Edwin Onuonga.</em>
+  <em>Authored and ~maintained~ by Edwin Onuonga.</em>
 </p>
