@@ -19,7 +19,7 @@ pip install .[dev]
 Once the dependencies are installed, you can build the documentation with the following command (from the `docs` directory).
 
 ```console
-sphinx-autobuild . _build/html --watch ../lib
+sphinx-autobuild . _build/html --watch ../src
 ```
 
-This will pick up any changes made to the `docs` and `lib` directories and restart the Sphinx server.
+This will pick up any changes made to the `docs` and `src` directories and restart the Sphinx server.

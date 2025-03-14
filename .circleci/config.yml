@@ -20,6 +20,7 @@ template: &template
         name: Set up git + miniconda
         command: |
           apt update
+          apt upgrade
           DEBIAN_FRONTEND=noninteractive apt install -y wget git-all
           cd $HOME
           wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh

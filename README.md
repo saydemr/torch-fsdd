@@ -6,20 +6,6 @@
   <em>A utility for wrapping the Free Spoken Digit Dataset into PyTorch-ready data set splits.</em>
 </p>
 
-<p align="center">
-  <a href="https://pypi.org/project/torchfsdd">
-    <img src="https://img.shields.io/pypi/v/torchfsdd?style=flat-square" alt="PyPI"/>
-  </a>
-  <a href="https://pypi.org/project/torchfsdd">
-    <img src="https://img.shields.io/pypi/pyversions/torchfsdd?style=flat-square" alt="PyPI - Python Version"/>
-  </a>
-  <a href="https://raw.githubusercontent.com/eonu/torchfsdd/master/LICENSE">
-    <img src="https://img.shields.io/pypi/l/torchfsdd?style=flat-square" alt="PyPI - License"/>
-  </a>
-  <a href="https://torch-fsdd.readthedocs.io/en/latest/">
-    <img src="https://readthedocs.org/projects/torch-fsdd/badge/?version=latest&style=flat-square" alt="Read The Docs - Documentation"/>
-  </a>
-</p>
 
 ## About
 
