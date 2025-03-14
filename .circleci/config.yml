@@ -21,17 +21,12 @@ template: &template
         command: |
           apt update
           apt upgrade -y
-          DEBIAN_FRONTEND=noninteractive apt install -y wget git-all
+          DEBIAN_FRONTEND=noninteractive apt install -y wget git-all curl
           cd $HOME
-          wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
-          bash miniconda.sh -b -p $HOME/miniconda
     - run:
         name: Set up environment, dependencies and run tests
         command: |
-          export PATH="$HOME/miniconda/bin:$PATH"
-          conda create -n torchfsdd python=$PYTHON_VERSION -y
-          conda activate torchfsdd
-          conda install -c conda-forge 'ffmpeg<7'
+          export PATH="$HOME/.pixi/bin:$PATH"
           pip install -e ".[dev]"
           pytest src/test --disable-pytest-warnings
 
